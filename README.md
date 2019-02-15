@@ -4,5 +4,5 @@ Commands to use:
 $ python manage.py makemigrations DeptApp
 $ python manage.py migrate
 $ python manage.py createsuperuser
-
+$ python manage.py runserver
 ```
