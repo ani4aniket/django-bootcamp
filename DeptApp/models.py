@@ -17,12 +17,7 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
-class Teacher(models.Model):
-    name=models.CharField(max_length=30)
-    e_mail=models.EmailField(max_length=254)
-    contact_no=models.CharField(max_length=10)
-    department=models.CharField(max_length=4,choices=[
-                                                    ('IT','Information Technology'),
-                                                    ('CSE','Computer Science Engineering'),
-                                                ]
-                           )
+    # from django.urls import reverse
+
+    # def get_absolute_url(self):
+    #     return   reverse('std_detail',kwargs={'pk':self.id})  

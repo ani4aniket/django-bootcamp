@@ -5,8 +5,14 @@ from django.shortcuts import render
 from .models import Student
 
 
-def StudentDetailView(request):
+def StudentListView(request):
     students= Student.objects.all()
     return render(request,
-                  'students.html',
+                  'student_list.html',
                   {'all_students':students})
+
+
+def StudentDetailView(request,pk):
+    std= Student.objects.get(id=pk)
+
+    return render(request,'students_details.html',{'student':std})

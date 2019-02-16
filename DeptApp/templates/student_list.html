@@ -10,15 +10,8 @@
 </head>
 <body>
     <h1>Here are the list of all Students</h1>
-    {% for student in all_students %}
-        <p>{{student.name}}</p>
-        <p>{{student.date_of_birth}}</p>
-        <p>{{student.stream}}</p>
-        <p>{{student.e_mail}}</p>
-        <p>{{student.contact_no}}</p>
-        <br>
-
+    {% for std in all_students %}
+        <h2><a href="{% url 'std_detail' std.id %}">{{std.name}}</a></h2>
     {% endfor %}
-
 </body>
 </html>
